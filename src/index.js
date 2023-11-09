@@ -33,12 +33,14 @@ function displayFirstMovie(movie){
 
 function decreaseTickets(){
     let buyTicketButton = document.querySelector('#buy-ticket')
+    // const movieTitle = document.querySelector('.film item')
     buyTicketButton.textContent = "Buy ticket"
         if (availableTickets.textContent > 0) {
         availableTickets.textContent-=1
         } else {
             alert('This movie is sold out!')
             buyTicketButton.textContent = "Sold out"
+            // movieTitle.className.add('sold-out')
         }
     }
 
@@ -54,5 +56,9 @@ function addMovieTitle(movie){
     newMovie.textContent = movie.title
     movieList.append(newMovie)
 
-    const button = document.createElement('button')
+    // newMovie.addEventListener('click', (movie) => {displayMovies(movie)})
 }
+
+// function displayMovies(movie){
+//     console.log(movie)
+// }
